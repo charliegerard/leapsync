@@ -137,11 +137,6 @@
           Leap.vec3.cross(crossProduct, direction, normal);
 
           for(var i = 0; i < hand.fingers.length; i++){
-            // var finger = frame.hands[0].fingers[0];
-            if(hand.fingers[i].extended){
-              // console.log(hand.fingers[i].extended)
-              // console.log(frame.hands[0].fingers[i].type + 'is extended')
-            }
 
             // ------------ LETTER D -----------------
             if(hand.fingers[1].extended && !hand.fingers[0].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
