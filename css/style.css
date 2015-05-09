@@ -86,13 +86,25 @@ a{
 	line-height: 10px;
 }
 
+#logo-learning-page{
+	width: 25%;
+	margin-left: -30px;
+	margin-top: -40px;
+	height: 130px;
+}
+
+#logo-learning-page img{
+	width: 100%;
+}
+
 .learning-page{
 	background-color: white;
+	margin: 0;
 }
 
 #container{
-	width: 100%;
-	display: block;
+	width: 79%;
+	display: inline-block;
 	margin: auto;
 	padding-top: 4em;
 }
@@ -101,8 +113,6 @@ a{
 	width: 50%;
 	height: 500px;
 	display: block;
-	/*background-color: #BADA55;*/
-	/*border: 3px solid black;*/
 	margin: auto;
 	padding-top: 2em;
 }
@@ -111,4 +121,35 @@ img{
 	width: 100%;
 	display: block;
 	margin: auto;
+}
+
+hr{
+	padding: 0.1em;
+	background-color: grey;
+	width: 95%;
+}
+
+#column1{
+	display: inline-block;
+	width: 15%;
+	border-right: 2px solid grey;
+}
+
+#footer{
+	width: 100%;
+	display: block;
+	background-color: grey;
+	bottom: 0;
+	padding: 0.5em;
+		margin-top: 2em;
+}
+
+#footer p{
+	color: white;
+	font-weight: 200;
+	/*font-family: 'Lato', sans-serif;*/
+	font-family: 'Montserrat', sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
 }
