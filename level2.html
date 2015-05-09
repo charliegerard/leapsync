@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>LeapSync - Interactive visualization for sign language</title>
+    <script src="http://js.leapmotion.com/leap-0.6.3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body class="learning-page">
+    <div id="logo"></div>
+    <p class="logo-title">LeapSync</p>
+    <h1>Oops... This level does not exist yet. Bummer!</h1>
+    <div id="output"></div>
+    <div id="hands"></div>
+    <div id="pointables"></div>
+    <div id="letter"></div>
+  </body>
+      <script>
+
+      var output = document.getElementById('output');
+      var hands = document.getElementById("hands");
+      var pointables = document.getElementById("pointables");
+      var letter = document.getElementById("letter");
+      var img = document.createElement("img");
+
+      Leap.loop(function (frame) {
+        // output.innerHTML = 'Frame: ' + frame.id
+
+        // hands.innerHTML = 'Hands:' + frame.hands.length;
+        // console.log(frame.hands[0].palmPosition)
+
+        // if(frame.hands[0].palmPosition[3] < (-20)){
+        //   console.log('hand sideways')
+        // }
+        // pointables.innerHTML = 'Pointables:' + frame.pointables;
+
+      var crossProduct = Leap.vec3.create();
+      var direction = frame.hands[0].direction;
+      var normal = frame.hands[0].palmNormal;
+
+      Leap.vec3.cross(crossProduct, direction, normal);
+
+      // ---------------- HAND SIDEWAYS ---------- //
+      // ---------------- TRYING TO DO LETTER C --------- //
+      if((Leap.vec3.cross(crossProduct, direction, normal)[0] > 0) && frame.hands[0].fingers[4].extended){
+        // console.log('hand sideways');
+        console.log('letter C');
+      }
+
+        if(frame.hands.length > 0){
+          var hand = frame.hands[0];
+
+          for(var i = 0; i < hand.fingers.length; i++){
+            // var finger = frame.hands[0].fingers[0];
+            if(hand.fingers[i].extended){
+              // console.log(hand.fingers[i].extended)
+              // console.log(frame.hands[0].fingers[i].type + 'is extended')
+            }
+
+            // ------------ LETTER D -----------------
+            if(hand.fingers[1].extended && !hand.fingers[0].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
+              // img.src = 'images/D.png'
+              // letter.appendChild(img)
+
+            // ------------ LETTER A ------------------
+            }else if(hand.fingers[0].extended && !hand.fingers[1].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
+              // img.src = 'images/a.gif'
+              // letter.appendChild(img)
+
+              // ------------ LETTER B ------------------
+            }else if(!hand.fingers[0].extended && hand.fingers[1].extended && hand.fingers[2].extended && hand.fingers[3].extended && hand.fingers[4].extended){
+              // img.src = 'images/b.gif'
+              // letter.appendChild(img)
+
+              // ------------ LETTER F ------------------
+            }else if(!hand.fingers[0].extended && !hand.fingers[1].extended && hand.fingers[2].extended && hand.fingers[3].extended && hand.fingers[4].extended){
+              // img.src = 'images/f.png'
+              // letter.appendChild(img)
+
+              // ------------ LETTER I ------------------
+            }else if(!hand.fingers[0].extended && !hand.fingers[1].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && hand.fingers[4].extended){
+              // img.src = 'images/i.gif'
+              // letter.appendChild(img)
+            } else {
+              letter.innerHTML = ""
+            }
+          }
+        }
+      });
+
+    </script>
+</html>

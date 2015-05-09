@@ -1,0 +1,114 @@
+body{
+	/*font-family: 'Arial Narrow';*/
+	font-family: 'Montserrat', sans-serif;
+	background-color: #ff8d6c;
+}
+
+h1, h4, p{
+	text-align: center;
+}
+
+h1{
+	font-size: 70px;
+}
+
+div#intro{
+	width: 60%;
+	margin: auto;
+	display: block;
+	padding: 0;
+}
+
+div#intro h4{
+	font-size: 30px;
+	font-weight: 500;
+	padding: 0;
+	width: 90%;
+	display: block;
+	margin: auto;
+	margin-bottom: 1em;
+}
+
+div#intro p{
+	width: 70%;
+	font-weight: 200;
+	display: block;
+	margin: auto;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	font-size: 18px;
+}
+
+div#level1, div#level2{
+	display: block;
+	margin: auto;
+	padding: 1em;
+}
+
+#buttons{
+	display: block;
+	width: 70%;
+	margin: auto;
+	margin-top: 2.5em;
+}
+
+#button1, #button2{
+	text-align: center;
+	margin-bottom: 1em;
+	border: 3px solid black;
+	width: 25%;
+	display: block;
+	margin: auto;
+}
+
+a{
+	text-decoration: none;
+	font-weight: 600;
+	color: black;
+}
+
+#logo{
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 10px;
+	display: inline-block;
+}
+
+/* --------------- Learning page ----------*/
+
+.logo-title{
+	display: inline-block;
+	font-family: 'Lato', sans-serif;
+	font-weight: 600;
+	width: 5%;
+	font-size: 14px;
+	line-height: 10px;
+}
+
+.learning-page{
+	background-color: white;
+}
+
+#container{
+	width: 100%;
+	display: block;
+	margin: auto;
+	padding-top: 4em;
+}
+
+#letter{
+	width: 50%;
+	height: 500px;
+	display: block;
+	/*background-color: #BADA55;*/
+	/*border: 3px solid black;*/
+	margin: auto;
+	padding-top: 2em;
+}
+
+img{
+	width: 100%;
+	display: block;
+	margin: auto;
+}
