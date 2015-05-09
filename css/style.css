@@ -135,6 +135,10 @@ hr{
 	border-right: 2px solid grey;
 }
 
+#column1 img{
+	margin-bottom: 1em;
+}
+
 #footer{
 	width: 100%;
 	display: block;
