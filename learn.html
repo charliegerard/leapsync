@@ -12,55 +12,95 @@
     </div>
     <hr>
 
-    <div id="row">
-      <div id="image">
-       <img src="./images/singleHandsA.png">
+    <div id="row1">
+      <div class="image">
+       <img src="./images/hands-02.png">
       </div>
 
-      <div id="image">
-        <img src="./images/singleHandsB.png">
+      <div class="image">
+        <img src="./images/hands-03.png">
       </div>
 
-      <div id="image">
-        <img src="./images/singleHandsC.png">
+      <div class="image">
+        <img src="./images/hands-04.png">
       </div>
 
-      <div id="image">
-       <img src="./images/singleHandsD.png">
+      <div class="image">
+       <img src="./images/hands-05.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-06.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-07.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-08.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-09.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-10.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-11.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-12.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-13.png">
+     </div>
+           <div class="image">
+       <img src="./images/hands-14.png">
+     </div>
+   </div>
+
+   <div id="row2">
+      <div class="image">
+       <img src="./images/hands-15.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-16.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-17.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-18.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-19.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-20.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-21.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-22.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-23.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-24.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-25.png">
+     </div>
+      <div class="image">
+       <img src="./images/hands-26.png">
      </div>
 
-      <div id="image">
-       <img src="./images/singleHandsE.png">
+    <div class="image">
+       <img src="./images/hands-27.png">
      </div>
-      <div id="image">
-       <img src="./images/singleHandsF.png">
-     </div>
-      <div id="image">
-       <img src="./images/singleHandsG.png">
-     </div>
-      <div id="image">
-       <img src="./images/singleHandsH.png">
-     </div>
-      <div id="image">
-       <img src="./images/singleHandsI.png">
-     </div>
-      <div id="image">
-       <img src="./images/singleHandsJ.png">
-     </div>
-      <div id="image">
-       <img src="./images/singleHandsK.png">
-     </div>
-      <div id="image">
-       <img src="./images/singleHandsL.png">
-     </div>
-      <!-- <img src="./images/handsF.png"> -->
-      <!-- <img src="./images/handsI.png"> -->
     </div>
 
     <div id="container">
-      <!-- <div id="output"></div> -->
-      <!-- <div id="hands"></div> -->
-      <!-- <div id="pointables"></div> -->
       <div id="letter"></div>
     </div>
 
@@ -106,11 +146,15 @@
             // ------------ LETTER D -----------------
             if(hand.fingers[1].extended && !hand.fingers[0].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
               img.src = 'images/letterD.png'
+
+              // var miniHandD = document.getElementsByClassName('image')[3]
+              // miniHandD.style.borderBottom = '2px solid red'
               letter.appendChild(img)
 
             // ------------ LETTER A ------------------
             }else if(hand.fingers[0].extended && !hand.fingers[1].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
-              img.src = 'images/letterAanimationA.gif'
+              img.src = 'images/letterA.png'
+              // img.className = 'imageA'
               letter.appendChild(img)
 
               // ------------ LETTER B ------------------

@@ -125,16 +125,23 @@ a{
 	width: 100%;
 	display: inline-block;
 	margin: auto;
-	padding-top: 3em;
 }
 
 #letter{
 	width: 50%;
-	height: 500px;
+	height: 450px;
 	display: block;
 	margin: auto;
-	padding-top: 2em;
+	/*padding-top: 2em;*/
 }
+
+#letter img{
+	width: 100%;
+}
+
+/*#letter img .imageA{
+	width: 64%;
+}*/
 
 #intro-img{
 	width: 20%;
@@ -157,21 +164,27 @@ hr{
 	width: 95%;
 }
 
-#row{
+#row1, #row2{
 	display: block;
-	width: 100%;
-	padding: 0.5em 1em;
+	width: 90%;
+	/*padding: 0.1em 0em;*/
+	margin: auto;
 	/*border-right: 2px solid grey;*/
 }
 
-#row #image{
-	width: 4%;
+#row2{
+	margin-top: -45px;
+}
+
+#row1 .image, #row2 .image{
+	width: 5%;
 	margin-bottom: 1em;
 	margin-right: 1em;
 	display: inline-block;
+	/*padding-bottom: 1em;*/
 }
 
-#row#image img{
+#row1.image img{
 	width: 100%;
 }
 
@@ -181,7 +194,6 @@ hr{
 	background-color: grey;
 	bottom: 0;
 	padding: 0.5em;
-	margin-top: 2em;
 }
 
 #footer p{
