@@ -145,7 +145,7 @@
 
             // ------------ LETTER D -----------------
             if(hand.fingers[1].extended && !hand.fingers[0].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
-              img.src = 'images/letterD.png'
+              img.src = 'images/LETTERS2/letterDNew.png'
 
               // var miniHandD = document.getElementsByClassName('image')[3]
               // miniHandD.style.borderBottom = '2px solid red'
@@ -153,23 +153,23 @@
 
             // ------------ LETTER A ------------------
             }else if(hand.fingers[0].extended && !hand.fingers[1].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
-              img.src = 'images/letterA.png'
+              img.src = 'images/LETTERS2/letterANew.png'
               // img.className = 'imageA'
               letter.appendChild(img)
 
               // ------------ LETTER B ------------------
             }else if(!hand.fingers[0].extended && hand.fingers[1].extended && hand.fingers[2].extended && hand.fingers[3].extended && hand.fingers[4].extended){
-              img.src = 'images/letterB.png'
+              img.src = 'images/LETTERS2/letterBNew.png'
               letter.appendChild(img)
 
               // ------------ LETTER F ------------------
             }else if(!hand.fingers[0].extended && !hand.fingers[1].extended && hand.fingers[2].extended && hand.fingers[3].extended && hand.fingers[4].extended){
-              img.src = 'images/letterF.png'
+              img.src = 'images/LETTERS2/letterFNew.png'
               letter.appendChild(img)
 
               // ------------ LETTER I ------------------
             }else if(!hand.fingers[0].extended && !hand.fingers[1].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && hand.fingers[4].extended){
-              img.src = 'images/letterI.png'
+              img.src = 'images/LETTERS2/letterINew.png'
               letter.appendChild(img)
             }
 
@@ -177,7 +177,7 @@
             else if((Leap.vec3.cross(crossProduct, direction, normal)[0] > 0) && frame.hands[0].fingers[4].extended){
               // console.log('hand sideways');
               // console.log('letter C');
-              img.src = 'images/letterC.png'
+              img.src = 'images/LETTERS2/letterCNew.png'
               letter.appendChild(img)
             }else {
               letter.innerHTML = ""
