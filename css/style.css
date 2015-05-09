@@ -1,7 +1,21 @@
+@media only screen and (min-device-width:480px){
+	div#intro h4{
+		font-size: 1em;
+		font-weight: 500;
+		padding: 0;
+		width: 90%;
+		display: block;
+		color: white;
+		margin: auto;
+		margin-bottom: 1em;
+	}
+}
+
+
 body{
 	/*font-family: 'Arial Narrow';*/
 	font-family: 'Montserrat', sans-serif;
-	background-color: #ff8d6c;
+	background-color: #f2726b;
 }
 
 h1, h4, p{
@@ -9,7 +23,7 @@ h1, h4, p{
 }
 
 h1{
-	font-size: 70px;
+	font-size: 60px;
 }
 
 div#intro{
@@ -20,23 +34,25 @@ div#intro{
 }
 
 div#intro h4{
-	font-size: 30px;
+	font-size: 2em;
 	font-weight: 500;
 	padding: 0;
 	width: 90%;
 	display: block;
+	color: white;
 	margin: auto;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 }
 
 div#intro p{
-	width: 70%;
+	width: 80%;
 	font-weight: 200;
 	display: block;
 	margin: auto;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
 	font-size: 18px;
+	color: white;
 }
 
 div#level1, div#level2{
@@ -49,13 +65,13 @@ div#level1, div#level2{
 	display: block;
 	width: 70%;
 	margin: auto;
-	margin-top: 2.5em;
+	margin-top: 1.5em;
 }
 
 #button1, #button2{
 	text-align: center;
 	margin-bottom: 1em;
-	border: 3px solid black;
+	border: 3px solid white;
 	width: 25%;
 	display: block;
 	margin: auto;
@@ -64,15 +80,17 @@ div#level1, div#level2{
 a{
 	text-decoration: none;
 	font-weight: 600;
-	color: black;
+	color: white;
 }
 
-#logo{
-	width: 20px;
-	height: 20px;
-	background-color: black;
-	border-radius: 10px;
-	display: inline-block;
+#logo img{
+	width: 8%;
+	/*height: 20px;*/
+	/*left: 0;*/
+	/*margin: -50px;*/
+	/*background-color: black;*/
+	/*border-radius: 10px;*/
+	/*display: inline-block;*/
 }
 
 /* --------------- Learning page ----------*/
@@ -87,10 +105,11 @@ a{
 }
 
 #logo-learning-page{
-	width: 25%;
-	margin-left: -30px;
-	margin-top: -40px;
-	height: 130px;
+	width: 10%;
+	margin: 1em;
+	/*margin-left: -30px;*/
+	/*margin-top: -40px;*/
+	/*height: 130px;*/
 }
 
 #logo-learning-page img{
@@ -103,10 +122,10 @@ a{
 }
 
 #container{
-	width: 79%;
+	width: 100%;
 	display: inline-block;
 	margin: auto;
-	padding-top: 4em;
+	padding-top: 3em;
 }
 
 #letter{
@@ -117,26 +136,43 @@ a{
 	padding-top: 2em;
 }
 
-img{
-	width: 100%;
+#intro-img{
+	width: 20%;
 	display: block;
 	margin: auto;
+	margin-bottom:0.5em;
+}
+
+#intro-img img{
+	width: 80%;
+	display: block;
+	margin: auto;
+	margin-bottom:0.5em;
 }
 
 hr{
 	padding: 0.1em;
-	background-color: grey;
+	background-color: #f2726b;
+	border: none;
 	width: 95%;
 }
 
-#column1{
-	display: inline-block;
-	width: 15%;
-	border-right: 2px solid grey;
+#row{
+	display: block;
+	width: 100%;
+	padding: 0.5em 1em;
+	/*border-right: 2px solid grey;*/
 }
 
-#column1 img{
+#row #image{
+	width: 4%;
 	margin-bottom: 1em;
+	margin-right: 1em;
+	display: inline-block;
+}
+
+#row#image img{
+	width: 100%;
 }
 
 #footer{
@@ -145,7 +181,7 @@ hr{
 	background-color: grey;
 	bottom: 0;
 	padding: 0.5em;
-		margin-top: 2em;
+	margin-top: 2em;
 }
 
 #footer p{
