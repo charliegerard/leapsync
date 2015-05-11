@@ -40,11 +40,13 @@
 </div>
 <script>
 
-  var controller = new Leap.Controller();
+  $(document).ready(function(){
+    var controller = new Leap.Controller();
 
-  if(!controller.deviceAttached){
-    alert('Good old alert message to let you know there is no Leap Motion device detected so this app will not do anything.')
-  }
+    if(!controller.deviceAttached){
+      alert('Good old alert message to let you know there is no Leap Motion device detected so this app will not do anything.')
+    }
+  })
 
 </script>
 
