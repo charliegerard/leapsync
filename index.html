@@ -14,8 +14,8 @@
   </div>
 
   <div id="intro-img">
-  <img src="./images/logoSingle2white.png">
-</div>
+    <img src="./images/logoSingle2white.png">
+  </div>
 
   <div id="intro">
     <h4>An interactive visualization for sign language using the Leap Motion.</h4>
@@ -23,28 +23,37 @@
   </div>
 
 
-<div id="buttons">
-  <div id="button1">
-    <a href="learn.html">
-      <div id="level1">START</div>
-    </a>
+  <div id="buttons">
+    <div id="button1">
+      <a href="learn.html">
+        <div id="level1">START</div>
+      </a>
+    </div>
+
+    <div id="button1">
+      <a href="">
+        <div id="level1">LEARN MORE</div>
+      </a>
+    </div>
+    </br>
   </div>
 
-  <div id="button1">
-    <a href="">
-      <div id="level1">LEARN MORE</div>
-    </a>
+  <div id="alert">
+    <p>Oops.. It seems like there is no Leap Motion device detected so this app will not do much.</p>
+    <button id="cancel">Cancel</button>
   </div>
-  </br>
-</div>
 <script>
 
   $(document).ready(function(){
     var controller = new Leap.Controller();
 
     if(!controller.deviceAttached){
-      alert('Good old alert message to let you know there is no Leap Motion device detected so this app will not do anything.')
+      $('#alert').fadeIn();
+      // $('#alert').css('display', 'block');
     }
+    $('#cancel').click(function(){
+      $('#alert').fadeOut();
+    });
   })
 
 </script>

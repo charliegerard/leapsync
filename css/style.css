@@ -4,6 +4,19 @@ body{
 	background-color: #f2726b;
 }
 
+#alert{
+	display: none;
+	width: 50%;
+	padding: 0 1em;
+	border: 3px solid black;
+	margin: auto;
+	position: absolute;
+	top: 30%;
+	background-color: white;
+	left: 25%;
+	text-align: center;
+}
+
 h1, h4, p{
 	text-align: center;
 }
