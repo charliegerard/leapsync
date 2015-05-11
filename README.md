@@ -2,7 +2,7 @@
 
 This app aims at teaching the basics of sign language using the Leap Motion controller.
 
-Built by Daisy Smith(http://github.com.daisymarie128) and I.
+Built by Daisy Smith[http://github.com.daisymarie128] and I.
 
 ####This is still a work in progress.
 
