@@ -4,10 +4,11 @@
     <script src="http://js.leapmotion.com/leap-0.6.3.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
   </head>
   <body class="learning-page">
     <div id="logo-learning-page">
-      <!-- <img src="./images/logos-05.png"> -->
       <img src="./images/logo-learn-page-orange.png">
     </div>
     <hr>
@@ -108,78 +109,4 @@
       <p>Made by Daisy Smith & Charlie Gerard</p>
     </div>
   </body>
-      <script>
-
-      var output = document.getElementById('output');
-      var hands = document.getElementById("hands");
-      var pointables = document.getElementById("pointables");
-      var letter = document.getElementById("letter");
-      var img = document.createElement("img");
-
-      Leap.loop(function (frame) {
-        // output.innerHTML = 'Frame: ' + frame.id
-
-        // hands.innerHTML = 'Hands:' + frame.hands.length;
-        // console.log(frame.hands[0].palmPosition)
-
-        // if(frame.hands[0].palmPosition[3] < (-20)){
-        //   console.log('hand sideways')
-        // }
-        // pointables.innerHTML = 'Pointables:' + frame.pointables;
-
-        if(frame.hands.length > 0){
-          var hand = frame.hands[0];
-
-          var crossProduct = Leap.vec3.create();
-          var direction = frame.hands[0].direction;
-          var normal = frame.hands[0].palmNormal;
-
-          Leap.vec3.cross(crossProduct, direction, normal);
-
-          for(var i = 0; i < hand.fingers.length; i++){
-
-            // ------------ LETTER D -----------------
-            if(hand.fingers[1].extended && !hand.fingers[0].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
-              img.src = 'images/LETTERS2/letterDNew.png'
-
-              // var miniHandD = document.getElementsByClassName('image')[3]
-              // miniHandD.style.borderBottom = '2px solid red'
-              letter.appendChild(img)
-
-            // ------------ LETTER A ------------------
-            }else if(hand.fingers[0].extended && !hand.fingers[1].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && !hand.fingers[4].extended){
-              img.src = 'images/LETTERS2/letterANew.png'
-              // img.className = 'imageA'
-              letter.appendChild(img)
-
-              // ------------ LETTER B ------------------
-            }else if(!hand.fingers[0].extended && hand.fingers[1].extended && hand.fingers[2].extended && hand.fingers[3].extended && hand.fingers[4].extended){
-              img.src = 'images/LETTERS2/letterBNew.png'
-              letter.appendChild(img)
-
-              // ------------ LETTER F ------------------
-            }else if(!hand.fingers[0].extended && !hand.fingers[1].extended && hand.fingers[2].extended && hand.fingers[3].extended && hand.fingers[4].extended){
-              img.src = 'images/LETTERS2/letterFNew.png'
-              letter.appendChild(img)
-
-              // ------------ LETTER I ------------------
-            }else if(!hand.fingers[0].extended && !hand.fingers[1].extended && !hand.fingers[2].extended && !hand.fingers[3].extended && hand.fingers[4].extended){
-              img.src = 'images/LETTERS2/letterINew.png'
-              letter.appendChild(img)
-            }
-
-            // ---------------- LETTER C --------- //
-            else if((Leap.vec3.cross(crossProduct, direction, normal)[0] > 0) && frame.hands[0].fingers[4].extended){
-              // console.log('hand sideways');
-              // console.log('letter C');
-              img.src = 'images/LETTERS2/letterCNew.png'
-              letter.appendChild(img)
-            }else {
-              letter.innerHTML = ""
-            }
-          }
-        }
-      });
-
-    </script>
 </html>

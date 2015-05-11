@@ -5,16 +5,16 @@
   <title>LeapSync - Interactive visualization for sign language</title>
   <link rel="stylesheet" href="css/style.css">
   <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
   <div id="logo">
-    <!-- <img src="./images/logos-02.png"> -->
     <img src="./images/logoSingle3-01.png">
   </div>
 
   <div id="intro-img">
-  <!-- <img src="./images/logoSingle2-01.png"> -->
   <img src="./images/logoSingle2white.png">
 </div>
 
@@ -23,8 +23,6 @@
     <p>LeapSync is an interactive way to learn sign language by replicating the signs over the Leap Motion controller. By using simple graphics, it allows anyone to learn and communicate.</p>
   </div>
 
-
-<!-- <div id="output"></div> -->
 
 <div id="buttons">
   <div id="button1">
@@ -40,28 +38,18 @@
   </div>
   </br>
 </div>
+<script>
+
+  var controller = new Leap.Controller();
+
+  if(!controller.deviceAttached){
+    alert('Good old alert message to let you know there is no Leap Motion device detected so this app will not do anything.')
+  }
+
+</script>
 
 
 <script src="http://js.leapmotion.com/0.2.0-beta1/leap.min.js"></script>
-<!-- <script>
-// listen to Leap Motion
-// Leap.loop({enableGestures: true}, function(obj) {
-//   if (obj.gestures.length > 0) {
-//     obj.gestures.forEach(function(gesture) {
-//       output(gesture);
-//       // console.log("gesture", gesture);
-//     });
-//   }
-// });
-
-// var outputDiv = document.getElementById("output");
-// function output(json) {
-//   var div = document.createElement("div")
-//   div.innerHTML = JSON.stringify(json) + "<br/>";
-//   outputDiv.insertBefore(div, outputDiv.firstChild);
-// };
-
-</script>-->
 
 </body>
 </html>
