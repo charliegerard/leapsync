@@ -30,11 +30,11 @@
       </a>
     </div>
 
-    <div id="button1">
-      <a href="">
-        <div id="level1">LEARN MORE</div>
-      </a>
-    </div>
+    <!-- <div id="button1"> -->
+      <!-- <a href=""> -->
+        <!-- <div id="level1">LEARN MORE</div> -->
+      <!-- </a> -->
+    <!-- </div> -->
     </br>
   </div>
 
@@ -42,22 +42,22 @@
     <p>Oops.. It seems like there is no Leap Motion device detected so this app will not do much.</p>
     <button id="cancel">Cancel</button>
   </div>
-<script>
-
-  $(document).ready(function(){
-    var controller = new Leap.Controller();
-
-    if(!controller.deviceAttached){
-      $('#alert').fadeIn();
-      // $('#alert').css('display', 'block');
-    }
-    $('#cancel').click(function(){
-      $('#alert').fadeOut();
-    });
-  })
-
-</script>
   <script src="http://js.leapmotion.com/0.2.0-beta1/leap.min.js"></script>
+  <script>
+
+    $(document).ready(function(){
+      var controller = new Leap.Controller();
+
+      if(!controller.deviceAttached){
+        // $('#alert').fadeIn();
+        // $('#alert').css('display', 'block');
+      }
+      $('#cancel').click(function(){
+        // $('#alert').fadeOut();
+      });
+    })
+
+  </script>
   <script type="text/javascript" src="index.js"></script>
 
 </body>

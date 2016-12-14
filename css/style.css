@@ -62,7 +62,7 @@ div#level1, div#level2{
 
 #buttons{
 	display: block;
-	width: 30%;
+	max-width: 15%;
 	margin: auto;
 	margin-top: 1.5em;
 }
@@ -71,7 +71,8 @@ div#level1, div#level2{
 	text-align: center;
 	margin-bottom: 1em;
 	border: 3px solid white;
-	width: 45%;
+	/*width: 45%;*/
+	width: 100%;
 	display: inline-block;
 	margin: auto;
 }
